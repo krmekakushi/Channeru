@@ -67,7 +67,7 @@
     	<input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
 	 </div>
 	<div class="">
-	<input class="validate" id="imgurl" name="" required="" type="text" value='IMAGE URL'/>
+	<input  id="imgurl" name="" required="" type="text" value='IMAGE URL'/>
 	</div>
 	<div class="">
 	<input class="validate" id="" name="" required="" type="text" value='NAMA ROM'/>
@@ -89,11 +89,11 @@
 <script type="text/javascript">
   function showPreview(event){
   if(event.target.files.length > 0){
-    var src = URL.createObjectURL(event.target.files[0]);
+    var imageulr = URL.createObjectURL(event.target.files[0]);
     var preview = document.getElementById("file-ip-1-preview");
     preview.src = src;
     preview.style.display = "block";
-    document.getElementById("imgurl").innerHTML = src;
+    document.getElementById("imgurl").innerHTML =imageulr;
   }
 }
 </script>
