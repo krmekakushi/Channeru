@@ -75,7 +75,7 @@
 	<input class="validate" id="" name="" required="" type="text" value='VERSI ANDROID ROM'/>
 	</div>
 	<div class="">
-	<input class="validate" id="" name="" required="" type="text" value='TANGGAL'/>
+	<input class="validate" id="date" name="" required="" type="text" value=''/>
 	</div>
     <select id="wa_select">
 		<option hidden='hidden' selected='selected' value='default'>Select Option</option>
@@ -93,6 +93,12 @@
     preview.src = src;
     preview.style.display = "block";
   }
+	n =  new Date();
+	y = n.getFullYear();
+	m = n.getMonth() + 1;
+	d = n.getDate();
+	document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+  
 }
 </script>
 </div> 
