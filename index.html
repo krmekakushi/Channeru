@@ -21,165 +21,49 @@
   justify-content:center;
 
 }
- 
-	 
-	 
-// VARIABLES // ============================== //
-$bg-color: #424242;
-$hl-color: #2196F3;
-$muted-color: mix(white, $bg-color, 70%);
-$trans-time: 300ms;
-$width: 320px;
 
-*,
-:before,
-:after {
-  box-sizing: border-box;
+.card {
+  padding: 15px;
+  min-height: 300px;
+  width: 50%;
+  margin: 30px auto;
 }
 
-
-// FORM // ============================== //
-form {
-  width: $width;
-  margin: 45px auto;
-  
-  h1 {
-    font-size: 3em;
-    font-weight: 300;
-    text-align: center;
-    color: $hl-color;
-  }
-  h5 {
-    text-align: center;
-    text-transform: uppercase;
-    color: $muted-color;
-  }
-  hr.sep {
-    background: $hl-color;
-    box-shadow: none;
-    border: none;
-    height: 2px;
-    width: 25%;
-    margin: 0px auto 45px auto;
-  }
-  .emoji {
-    font-size: 1.2em;
-  }
-}
-
-.group {
+.acrylic {
   position: relative;
-  margin: 45px 0;
+  overflow: hidden;
 }
 
-// INPUTS // ============================== //
-textarea {
-  resize: none;
-}
-
-input,
-textarea {
-  background: none;
-  color: $muted-color;
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: $width;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid $muted-color;
-  &:focus {
-    outline: none;
-  }
-  &:focus ~ label,
-  &:valid ~ label {
-    top: -14px;
-    font-size: 12px;
-    color: $hl-color;
-  }
-  &:focus ~ .bar:before {
-    width: $width;
-  }
-}
-
-input[type="password"] {
-  letter-spacing: 0.3em;
-}
-
-label {
-  color: $muted-color;
-  font-size: 16px;
-  font-weight: normal;
+.acrylic::before {
+  filter: blur(3px);
+  content: "";
   position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: $trans-time ease all;
+  left: -10px;
+  top: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  z-index: -1;
 }
 
-.bar {
-  position: relative;
-  display: block;
-  width: $width;
-  &:before {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 0px;
-    position: absolute;
-    background: $hl-color;
-    transition: $trans-time ease all;
-    left: 0%;
-  }
-}
-
-// BUTTONS // ============================== //
-.btn {
+.acrylic::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.3;
   background: #fff;
-  color: mix(black, $muted-color, 25%);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 3px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  outline: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-  &:hover {
-    color: mix(black, $muted-color, 30%);
-    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
-  }
-  &.btn-link {
-    background: $hl-color;
-    color: mix(white, $hl-color, 80%);
-    &:hover {
-      background: darken($hl-color, 5%);
-      color: mix(white, $hl-color, 85%);
-    }
-  }
-  &.btn-submit {
-    background: $hl-color;
-    color: mix(white, $hl-color, 70%);
-    &:hover {
-      background: darken($hl-color, 5%);
-      color: mix(white, $hl-color, 85%);
-    }
-  }
-  &.btn-cancel {
-    background: #eee;
-    &:hover {
-      background: darken(#eee, 5%);
-      color: mix(black, $muted-color, 30%);
-    }
-  }
 }
 
-.btn-box {
-  text-align: center;
-  margin: 50px 0;
-}	 
-	 
+.shadow {
+  border-radius: 1px;
+  box-shadow: 0 5px 15px black;
+  text-shadow: 1px 1px #333;
+}
+ 
+ 
 
    
   </style>
@@ -187,7 +71,7 @@ label {
 </head>
 <body>
  <div class="center">
-  <div class="form-input">
+  <div class="card">
     <div class="preview">
       <img id="file-ip-1-preview">
     </div>
