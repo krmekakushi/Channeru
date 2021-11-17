@@ -76,7 +76,7 @@
 	<input class="validate" id="" name="" required="" type="text" value='VERSI ANDROID ROM'/>
 	</div>
 	<div class="">
-	<input type="date" id="theDate">
+	<input type="date" id="theDate" onchange="showDate(event);>
   	<input type="date" id="tanggal" value="" disabled>
 	</div>
     	<select id="">
@@ -98,7 +98,8 @@
     
   }
 }
-var date = new Date();
+ function showDate(event){
+  var date = new Date();
 var day = date.getDate();
 var month = date.getMonth() + 1;
 var year = date.getFullYear();
@@ -107,7 +108,7 @@ if (day < 10) day = "0" + day;
 var today = year + "-" + month + "-" + day;
 document.getElementById('theDate').value = today;
 document.getElementById('tanggal').value = today;	
-	
+}
 </script>
 </div> 
 </body>
