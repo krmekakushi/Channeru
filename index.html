@@ -15,7 +15,7 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: auto;
 }
 
 .container {
@@ -35,20 +35,9 @@ body {
   
 #file-ip-1-preview {
 	width: 60%;
-	display: none;
+	display: block;
 }
     
-.expandable {
-  overflow: block;
-  color: #000;   
-  transition: all .5s ease-in-out;
-  transform-origin: left top;
-  transform: scaleY(0);
- }
- 
- .expandable:target {
-  transform: scaleY(1);
-}	
 	
   </style>
 
@@ -104,8 +93,8 @@ body {
   }
 }
 	function myFunction(){
-var x = document.getElementById("theDate").value;
-  document.getElementById("tanggal").innerHTML = x;
+	var x = document.getElementById("theDate").value;
+	document.getElementById("tanggal").innerHTML = x;
 	}
 </script>
 </div> 
