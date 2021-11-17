@@ -76,7 +76,7 @@
 	<input class="validate" id="" name="" required="" type="text" value='VERSI ANDROID ROM'/>
 	</div>
 	<div class="">tanggal
-	<input type="date" id="theDate" >
+	<input type="date" id="theDate" onclick="myFunction()" >
   	<input type="text" id="tanggal" value="" disabled>
 	</div>
     	<select id="">
@@ -98,8 +98,10 @@
     
   }
 }
+	function myFunction(){
 var x = document.getElementById("theDate").value;
   document.getElementById("tanggal").value = x;
+	}
 </script>
 </div> 
 </body>
