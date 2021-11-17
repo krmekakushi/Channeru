@@ -26,6 +26,7 @@ body {
   background-color: rgba(255, 255, 255, .15);
   padding: 16px;
   backdrop-filter: blur(5px);
+  overflow:auto
 }
 .preview{
   height:100%;
@@ -38,6 +39,18 @@ body {
 	display: block;
 }
     
+.expandable {
+  overflow: hidden;
+  color: #000;   
+  transition: all .5s ease-in-out;
+  transform-origin: left top;
+  transform: scaleY(0);
+ }
+ 
+ .expandable:target {
+  transform: scaleY(1);
+}	
+	
   </style>
 
 </head>
@@ -45,7 +58,7 @@ body {
  <div class="container">
   <div class="card">
     <div class="preview">
-      <img id="file-ip-1-preview">
+      <img class="expandable" id="file-ip-1-preview">
     </div>
 	  <div class="">
     	<input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
@@ -88,6 +101,12 @@ body {
     preview.src = src;
     document.getElementById("imgurl").value =src;
     preview.style.display = "block";
+	
+	if (preview.style.display === "none") {
+    preview.style.display = "block";
+  } else {
+    preview.style.display = "none";
+  }
     
   }
 }
