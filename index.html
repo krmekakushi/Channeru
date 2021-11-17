@@ -77,7 +77,7 @@
 	</div>
 	<div class="">tanggal
 	<input type="date" id="theDate" onclick="myFunction()" >
-  	<input type="text" id="tanggal" value="" disabled>
+  	<p type="text" id="tanggal" value="" disabled>
 	</div>
     	<select id="">
 		<option hidden='hidden' selected='selected' value='default'>Select Option</option>
@@ -100,7 +100,7 @@
 }
 	function myFunction(){
 var x = document.getElementById("theDate").value;
-  document.getElementById("tanggal").value = x;
+  document.getElementById("tanggal").innerHTML = x;
 	}
 </script>
 </div> 
