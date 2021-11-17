@@ -67,7 +67,9 @@
     <div class="preview">
       <img id="file-ip-1-preview">
     </div>
-    <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+	  <div class="">
+    	<input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+	 </div>
 	<div class="">
 	<input class="validate" id="" name="" required="" type="text" value='NAMA ROM'/>
 	</div>
@@ -75,7 +77,7 @@
 	<input class="validate" id="" name="" required="" type="text" value='VERSI ANDROID ROM'/>
 	</div>
 	<div class="">
-	<input class="validate" id="date" name="" required="" type="text" value=''/>
+	<input class="validate" id="" name="" required="" type="text" value='TANGGAL'/>
 	</div>
     <select id="wa_select">
 		<option hidden='hidden' selected='selected' value='default'>Select Option</option>
@@ -93,12 +95,6 @@
     preview.src = src;
     preview.style.display = "block";
   }
-	n =  new Date();
-	y = n.getFullYear();
-	m = n.getMonth() + 1;
-	d = n.getDate();
-	document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-  
 }
 </script>
 </div> 
