@@ -92,8 +92,7 @@
     var src = URL.createObjectURL(event.target.files[0]);
     var preview = document.getElementById("file-ip-1-preview");
     preview.src = src;
-    var dataURL = preview.toDataURL();
-    document.getElementById("imgurl").innerHTML =dataURL;
+    document.getElementById("imgurl").value =src;
     preview.style.display = "block";
     
   }
